@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title> test for browser </title>
+
+    <style type="text/css">
+      .pass_green { color : green }
+      .fail_red { color : red }
+      .skip_yellow { color : yellow }
+    </style>
+    
+    <script src="./run-all-tests-electron-browser.js"></script>
+  </head>
+  <body onload="run_tests_on_browser()">
+    <h1> Results on browser iframes</h1>
+    <div id="results_on_browser_iframe"></div>
+
+    <h1> Results on browser </h1>
+    <div id="results_on_browser"></div>
+    <hr>
+    <h1> Results on node </h1>
+    <div id="results_on_node"></div>
+    <hr>
+  </body>
+</html>

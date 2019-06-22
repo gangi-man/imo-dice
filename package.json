@@ -1,0 +1,17 @@
+{
+    "name": "imo-dice-project",
+    "devDependencies": {
+        "electron": "^1.6.1",
+        "commander": "^2.19.0",
+        "uglify-es": "^3.3.9",
+        "date-utils": "latest"
+    },
+    "dependencies": {
+        "http-server": "^0.11.1"
+    },
+    "scripts": {
+        "build.bat": "node .\\bin\\build-bookmarklet.js",
+        "prelocaltest.bat": "node .\\bin\\build-bookmarklet.js",
+        "localtest.bat": ".\\node_modules\\.bin\\http-server -p 9998 ."
+    }
+}

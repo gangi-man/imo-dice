@@ -1,0 +1,8 @@
+*~
+node_modules/
+
+# generate by script
+modules/imodice-bookmarklet-body.js
+modules/imodice-bookmarklet-body-min.js
+modules/imodice-bookmarklet-github.js
+modules/imodice-bookmarklet-local.js

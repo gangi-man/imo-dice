@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title> test </title>
+  </head>
+  <body>
+    <h1> hello bookmarklet </h1>
+
+    <a href="javascript:(function(){if(typeof(__imo_dice_disp__)==='undefined'){let%20s=document.createElement('script');s.src='http://localhost:9998/modules/imodice-bookmarklet-body.js';s.onload=function(){__imo_dice_disp__=__imo_dice__().rpg_dice_display();__imo_dice_disp__.show();};document.body.appendChild(s);}else{__imo_dice_disp__.show();}})()">
+      imo-local
+    </a>
+
+    <a href="javascript:(function(){if(typeof(__imo_dice_disp__)==='undefined'){let%20s=document.createElement('script');s.src='https://gangi-man.github.io/imo-dice/imodice-latest.js';s.onload=function(){__imo_dice_disp__=__imo_dice__().rpg_dice_display();__imo_dice_disp__.show();};document.body.appendChild(s);}else{__imo_dice_disp__.show();}})()">
+       imo-github
+    </a>
+    
+    <ul>
+      <li> <a href="tests/data/dice-status-plain.html"> status </a></li>
+      <li> <a href="tests/data/dice-wiz-plain.html"> wiz </a></li>
+      <li> <a href="tests/data/dice-iroha-plain.html"> iroha </a></li>
+      <li> <a href="tests/data/dice-no-rule-plain.html"> no-rule </a></li>
+      <li> <a href="tests/data/dice-text-rule-plain.html"> text-rule </a></li>
+    </ul>
+  </body>
+</html>

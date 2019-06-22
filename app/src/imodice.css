@@ -1,0 +1,112 @@
+/* app title */
+.small_logo {
+    width: 65px;
+    height: 65px;
+}
+.imo_title {
+    font-size: 45px;
+    vertical-align: 10px;
+}
+
+/* container */
+.image_dice_container {
+    display: flex;
+}
+
+.image_dice_spacer {
+    width : 40px;
+    height : 300px;
+}
+
+.dummy_image_box {
+    width: 302px;
+    height: 302px;
+}
+.image_box {
+    position: fixed;
+    top : 120px;
+    left : 5px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000000;
+}
+
+
+/* rule tab */
+.ruleTabValid {
+}
+
+.ruleTabInvalid {
+    border-radius: 6px;
+    color: #eeeeee;
+    background-color: #c9171e;
+}
+
+.ruleTabNoTarget {
+    border-radius: 6px;
+    color: #101010;
+    background-color: #fef263;
+}
+
+.contextMenu {
+    background-color : #ffffee;
+    border: 1px solid #000000;
+}
+
+/* dice select */
+.dice_not_selected {
+    border: 1px solid #101010;
+    border-radius: 10px;
+
+    opacity : 0.4;
+}
+
+.dice_selected {
+    color: #eeeeee;
+    background-color: #2ca9e1;
+    border: 1px solid #007bbb;
+    border-radius: 10px;
+    opacity : 1.0;
+}
+
+.dice_selected_dup {
+    color: #eeeeee;
+    background-color: #c9171e;
+    border: 1px solid #e2041b;
+    border-radius: 10px;
+    opacity : 1.0;
+}
+
+.pv_style_enable {
+    opacity : 1.0;
+}
+
+.pv_style_disable {
+    opacity : 0.4;
+}
+
+.pv_style_red {
+    background-color : red;
+}
+
+.pv_style_yellow {
+    background-color : yellow;
+}
+
+.pv_style_normal { }
+     
+.pv_td_number {
+    width : 40px;
+}
+
+.pv_td_value {
+    width : 120px;
+}
+
+.pv_td_input_number {
+    width : 40px;
+}
+
+.pv_td_input_value {
+    width : 120px;
+}

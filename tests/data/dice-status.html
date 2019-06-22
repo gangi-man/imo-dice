@@ -1,0 +1,479 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <script src="./dice-common.js"></script>
+    <script src="../../modules/imodice-bookmarklet-body.js"></script>
+  </head>
+  <body vlink="#0000EE" text="#800000" link="#0000EE" bgcolor="#FFFFEE" alink="#FF0000">
+    <button onclick="show_dice()">SHOW</button>
+    <button onclick="show_chart()">SHOW CHART</button>    
+
+    <div class="thre" data-res="1000">画像ファイル名：
+      <a href="dice-status.jpg" target="_blank">dice-status1234567890.jpg</a>-(28388 B)<small>サムネ表示</small><br>
+      <a href="dice-status.jpg" target="_blank">
+        <img src="dice-status.jpg" alt="28388 B" width="250" hspace="20" height="250" border="0" align="left">
+      </a>
+      <input type="checkbox" name="1000" value="delete" id="delcheck1000">19/04/19(Fri) 21:01:31 No.1000
+      <a class="del" href="javascript:void(0);" onclick="del(1000);return(false);">del</a>
+      <a href="javascript:void(0);" onclick="sd(1000);return(false);" class="sod" id="sd1000">+</a>
+      <span class="cntd">20日09:01頃消えます</span>
+      <blockquote>dice5d100=<font color="#ff0000">67 11 24 35 16 (153)</font></blockquote>
+      <span class="maxres"></span>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1001" value="delete" id="delcheck1001">19/04/19(Fri) 22:01:31 No.1001
+	      <a class="del" href="javascript:void(0);" onclick="del(1001);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1001);return(false);" class="sod" id="sd1001">+</a>
+	      <blockquote>response:1<br>dice5d100=<font color="#ff0000">21 44 78 29 45 (217)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1002" value="delete" id="delcheck1002">19/04/19(Fri) 22:02:30 No.1002
+	      <a class="del" href="javascript:void(0);" onclick="del(1002);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1002);return(false);" class="sod" id="sd1002">+</a>
+	      <blockquote>response:2<br>dice5d100=<font color="#ff0000">84 32 97 28 15 (256)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1003" value="delete" id="delcheck1003">19/04/19(Fri) 22:03:29 No.1003
+	      <a class="del" href="javascript:void(0);" onclick="del(1003);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1003);return(false);" class="sod" id="sd1003">+</a>
+	      <blockquote>response:3<br>dice5d100=<font color="#ff0000">36 22 75 38 16 (187)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1004" value="delete" id="delcheck1004">19/04/19(Fri) 22:04:28 No.1004
+	      <a class="del" href="javascript:void(0);" onclick="del(1004);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1004);return(false);" class="sod" id="sd1004">+</a>
+	      <blockquote>response:4<br>dice5d100=<font color="#ff0000">99 83 16 17 24 (239)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1005" value="delete" id="delcheck1005">19/04/19(Fri) 22:05:27 No.1005
+	      <a class="del" href="javascript:void(0);" onclick="del(1005);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1005);return(false);" class="sod" id="sd1005">+</a>
+	      <blockquote>response:5<br>dice5d100=<font color="#ff0000">49 97 99 7 2 (254)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1006" value="delete" id="delcheck1006">19/04/19(Fri) 22:06:26 No.1006
+	      <a class="del" href="javascript:void(0);" onclick="del(1006);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1006);return(false);" class="sod" id="sd1006">+</a>
+	      <blockquote>response:6<br>dice5d100=<font color="#ff0000">51 89 37 88 6 (271)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1007" value="delete" id="delcheck1007">19/04/19(Fri) 22:07:25 No.1007
+	      <a class="del" href="javascript:void(0);" onclick="del(1007);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1007);return(false);" class="sod" id="sd1007">+</a>
+	      <blockquote>response:7<br>dice5d100=<font color="#ff0000">58 19 75 41 2 (195)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1008" value="delete" id="delcheck1008">19/04/19(Fri) 22:08:24 No.1008
+	      <a class="del" href="javascript:void(0);" onclick="del(1008);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1008);return(false);" class="sod" id="sd1008">+</a>
+	      <blockquote>response:8<br>dice5d100=<font color="#ff0000">39 86 98 56 40 (319)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1009" value="delete" id="delcheck1009">19/04/19(Fri) 22:09:23 No.1009
+	      <a class="del" href="javascript:void(0);" onclick="del(1009);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1009);return(false);" class="sod" id="sd1009">+</a>
+	      <blockquote>response:9<br>dice5d100=<font color="#ff0000">32 63 54 33 9 (191)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1010" value="delete" id="delcheck1010">19/04/19(Fri) 22:10:22 No.1010
+	      <a class="del" href="javascript:void(0);" onclick="del(1010);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1010);return(false);" class="sod" id="sd1010">+</a>
+	      <blockquote>response:10<br>dice5d100=<font color="#ff0000">20 59 82 57 43 (261)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1011" value="delete" id="delcheck1011">19/04/19(Fri) 22:11:21 No.1011
+	      <a class="del" href="javascript:void(0);" onclick="del(1011);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1011);return(false);" class="sod" id="sd1011">+</a>
+	      <blockquote>response:11<br>dice5d100=<font color="#ff0000">52 33 81 29 8 (203)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1012" value="delete" id="delcheck1012">19/04/19(Fri) 22:12:20 No.1012
+	      <a class="del" href="javascript:void(0);" onclick="del(1012);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1012);return(false);" class="sod" id="sd1012">+</a>
+	      <blockquote>response:12<br>dice5d100=<font color="#ff0000">34 16 89 66 45 (250)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1013" value="delete" id="delcheck1013">19/04/19(Fri) 22:13:19 No.1013
+	      <a class="del" href="javascript:void(0);" onclick="del(1013);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1013);return(false);" class="sod" id="sd1013">+</a>
+	      <blockquote>response:13<br>dice5d100=<font color="#ff0000">24 80 64 6 71 (245)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1014" value="delete" id="delcheck1014">19/04/19(Fri) 22:14:18 No.1014
+	      <a class="del" href="javascript:void(0);" onclick="del(1014);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1014);return(false);" class="sod" id="sd1014">+</a>
+	      <blockquote>response:14<br>dice5d100=<font color="#ff0000">14 7 29 94 57 (201)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1015" value="delete" id="delcheck1015">19/04/19(Fri) 22:15:17 No.1015
+	      <a class="del" href="javascript:void(0);" onclick="del(1015);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1015);return(false);" class="sod" id="sd1015">+</a>
+	      <blockquote>response:15<br>dice5d100=<font color="#ff0000">52 79 86 60 13 (290)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1016" value="delete" id="delcheck1016">19/04/19(Fri) 22:16:16 No.1016
+	      <a class="del" href="javascript:void(0);" onclick="del(1016);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1016);return(false);" class="sod" id="sd1016">+</a>
+	      <blockquote>response:16<br>dice5d100=<font color="#ff0000">8 51 45 46 47 (197)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1017" value="delete" id="delcheck1017">19/04/19(Fri) 22:17:15 No.1017
+	      <a class="del" href="javascript:void(0);" onclick="del(1017);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1017);return(false);" class="sod" id="sd1017">+</a>
+	      <blockquote>response:17<br>dice5d100=<font color="#ff0000">58 44 15 6 22 (145)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1018" value="delete" id="delcheck1018">19/04/19(Fri) 22:18:14 No.1018
+	      <a class="del" href="javascript:void(0);" onclick="del(1018);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1018);return(false);" class="sod" id="sd1018">+</a>
+	      <blockquote>response:18<br>dice5d100=<font color="#ff0000">19 27 61 11 82 (200)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1019" value="delete" id="delcheck1019">19/04/19(Fri) 22:19:13 No.1019
+	      <a class="del" href="javascript:void(0);" onclick="del(1019);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1019);return(false);" class="sod" id="sd1019">+</a>
+	      <blockquote>response:19<br>dice5d100=<font color="#ff0000">79 76 84 82 26 (347)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1020" value="delete" id="delcheck1020">19/04/19(Fri) 22:20:12 No.1020
+	      <a class="del" href="javascript:void(0);" onclick="del(1020);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1020);return(false);" class="sod" id="sd1020">+</a>
+	      <blockquote>response:20<br>dice5d100=<font color="#ff0000">31 20 73 5 13 (142)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1021" value="delete" id="delcheck1021">19/04/19(Fri) 22:21:11 No.1021
+	      <a class="del" href="javascript:void(0);" onclick="del(1021);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1021);return(false);" class="sod" id="sd1021">+</a>
+	      <blockquote>response:21<br>dice5d100=<font color="#ff0000">15 75 92 25 78 (285)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1022" value="delete" id="delcheck1022">19/04/19(Fri) 22:22:10 No.1022
+	      <a class="del" href="javascript:void(0);" onclick="del(1022);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1022);return(false);" class="sod" id="sd1022">+</a>
+	      <blockquote>response:22<br>dice5d100=<font color="#ff0000">89 71 83 55 89 (387)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1023" value="delete" id="delcheck1023">19/04/19(Fri) 22:23:09 No.1023
+	      <a class="del" href="javascript:void(0);" onclick="del(1023);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1023);return(false);" class="sod" id="sd1023">+</a>
+	      <blockquote>response:23<br>dice5d100=<font color="#ff0000">45 43 24 90 25 (227)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1024" value="delete" id="delcheck1024">19/04/19(Fri) 22:24:08 No.1024
+	      <a class="del" href="javascript:void(0);" onclick="del(1024);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1024);return(false);" class="sod" id="sd1024">+</a>
+	      <blockquote>response:24<br>dice5d100=<font color="#ff0000">100 93 24 43 11 (271)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1025" value="delete" id="delcheck1025">19/04/19(Fri) 22:25:07 No.1025
+	      <a class="del" href="javascript:void(0);" onclick="del(1025);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1025);return(false);" class="sod" id="sd1025">+</a>
+	      <blockquote>response:25<br>dice5d100=<font color="#ff0000">9 9 37 10 15 (80)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1026" value="delete" id="delcheck1026">19/04/19(Fri) 22:26:06 No.1026
+	      <a class="del" href="javascript:void(0);" onclick="del(1026);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1026);return(false);" class="sod" id="sd1026">+</a>
+	      <blockquote>response:26<br>dice5d100=<font color="#ff0000">60 93 8 86 89 (336)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1027" value="delete" id="delcheck1027">19/04/19(Fri) 22:27:05 No.1027
+	      <a class="del" href="javascript:void(0);" onclick="del(1027);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1027);return(false);" class="sod" id="sd1027">+</a>
+	      <blockquote>response:27<br>dice5d100=<font color="#ff0000">44 17 62 44 75 (242)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1028" value="delete" id="delcheck1028">19/04/19(Fri) 22:28:04 No.1028
+	      <a class="del" href="javascript:void(0);" onclick="del(1028);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1028);return(false);" class="sod" id="sd1028">+</a>
+	      <blockquote>response:28<br>dice5d100=<font color="#ff0000">54 46 5 48 84 (237)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1029" value="delete" id="delcheck1029">19/04/19(Fri) 22:29:03 No.1029
+	      <a class="del" href="javascript:void(0);" onclick="del(1029);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1029);return(false);" class="sod" id="sd1029">+</a>
+	      <blockquote>response:29<br>dice5d100=<font color="#ff0000">8 84 43 92 56 (283)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1030" value="delete" id="delcheck1030">19/04/19(Fri) 22:30:02 No.1030
+	      <a class="del" href="javascript:void(0);" onclick="del(1030);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1030);return(false);" class="sod" id="sd1030">+</a>
+	      <blockquote>response:30<br>dice5d100=<font color="#ff0000">57 13 2 50 5 (127)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1031" value="delete" id="delcheck1031">19/04/19(Fri) 22:31:01 No.1031
+	      <a class="del" href="javascript:void(0);" onclick="del(1031);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1031);return(false);" class="sod" id="sd1031">+</a>
+	      <blockquote>response:31<br>dice5d100=<font color="#ff0000">41 66 80 89 98 (374)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1032" value="delete" id="delcheck1032">19/04/19(Fri) 22:32:00 No.1032
+	      <a class="del" href="javascript:void(0);" onclick="del(1032);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1032);return(false);" class="sod" id="sd1032">+</a>
+	      <blockquote>response:32<br>dice5d100=<font color="#ff0000">15 87 25 28 83 (238)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1033" value="delete" id="delcheck1033">19/04/19(Fri) 22:32:59 No.1033
+	      <a class="del" href="javascript:void(0);" onclick="del(1033);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1033);return(false);" class="sod" id="sd1033">+</a>
+	      <blockquote>response:33<br>dice5d100=<font color="#ff0000">31 80 90 51 29 (281)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1034" value="delete" id="delcheck1034">19/04/19(Fri) 22:33:58 No.1034
+	      <a class="del" href="javascript:void(0);" onclick="del(1034);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1034);return(false);" class="sod" id="sd1034">+</a>
+	      <blockquote>response:34<br>dice5d100=<font color="#ff0000">59 78 57 28 54 (276)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1035" value="delete" id="delcheck1035">19/04/19(Fri) 22:34:57 No.1035
+	      <a class="del" href="javascript:void(0);" onclick="del(1035);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1035);return(false);" class="sod" id="sd1035">+</a>
+	      <blockquote>response:35<br>dice5d100=<font color="#ff0000">37 6 71 18 96 (228)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1036" value="delete" id="delcheck1036">19/04/19(Fri) 22:35:56 No.1036
+	      <a class="del" href="javascript:void(0);" onclick="del(1036);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1036);return(false);" class="sod" id="sd1036">+</a>
+	      <blockquote>response:36<br>dice5d100=<font color="#ff0000">21 82 97 95 81 (376)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1037" value="delete" id="delcheck1037">19/04/19(Fri) 22:36:55 No.1037
+	      <a class="del" href="javascript:void(0);" onclick="del(1037);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1037);return(false);" class="sod" id="sd1037">+</a>
+	      <blockquote>response:37<br>dice5d100=<font color="#ff0000">50 28 81 52 76 (287)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1038" value="delete" id="delcheck1038">19/04/19(Fri) 22:37:54 No.1038
+	      <a class="del" href="javascript:void(0);" onclick="del(1038);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1038);return(false);" class="sod" id="sd1038">+</a>
+	      <blockquote>response:38<br>dice5d100=<font color="#ff0000">74 55 83 66 2 (280)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1039" value="delete" id="delcheck1039">19/04/19(Fri) 22:38:53 No.1039
+	      <a class="del" href="javascript:void(0);" onclick="del(1039);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1039);return(false);" class="sod" id="sd1039">+</a>
+	      <blockquote>response:39<br>dice5d100=<font color="#ff0000">78 24 98 22 22 (244)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1040" value="delete" id="delcheck1040">19/04/19(Fri) 22:39:52 No.1040
+	      <a class="del" href="javascript:void(0);" onclick="del(1040);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1040);return(false);" class="sod" id="sd1040">+</a>
+	      <blockquote>response:40<br>dice5d100=<font color="#ff0000">12 45 100 38 77 (272)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1041" value="delete" id="delcheck1041">19/04/19(Fri) 22:40:51 No.1041
+	      <a class="del" href="javascript:void(0);" onclick="del(1041);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1041);return(false);" class="sod" id="sd1041">+</a>
+	      <blockquote>response:41<br>dice5d100=<font color="#ff0000">10 3 74 37 22 (146)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1042" value="delete" id="delcheck1042">19/04/19(Fri) 22:41:50 No.1042
+	      <a class="del" href="javascript:void(0);" onclick="del(1042);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1042);return(false);" class="sod" id="sd1042">+</a>
+	      <blockquote>response:42<br>dice5d100=<font color="#ff0000">82 78 39 44 19 (262)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1043" value="delete" id="delcheck1043">19/04/19(Fri) 22:42:49 No.1043
+	      <a class="del" href="javascript:void(0);" onclick="del(1043);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1043);return(false);" class="sod" id="sd1043">+</a>
+	      <blockquote>response:43<br>dice5d100=<font color="#ff0000">27 45 49 2 62 (185)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1044" value="delete" id="delcheck1044">19/04/19(Fri) 22:43:48 No.1044
+	      <a class="del" href="javascript:void(0);" onclick="del(1044);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1044);return(false);" class="sod" id="sd1044">+</a>
+	      <blockquote>response:44<br>dice5d100=<font color="#ff0000">52 72 86 71 80 (361)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1045" value="delete" id="delcheck1045">19/04/19(Fri) 22:44:47 No.1045
+	      <a class="del" href="javascript:void(0);" onclick="del(1045);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1045);return(false);" class="sod" id="sd1045">+</a>
+	      <blockquote>response:45<br>dice5d100=<font color="#ff0000">19 16 24 25 29 (113)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1046" value="delete" id="delcheck1046">19/04/19(Fri) 22:45:46 No.1046
+	      <a class="del" href="javascript:void(0);" onclick="del(1046);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1046);return(false);" class="sod" id="sd1046">+</a>
+	      <blockquote>response:46<br>dice5d100=<font color="#ff0000">11 75 77 90 57 (310)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1047" value="delete" id="delcheck1047">19/04/19(Fri) 22:46:45 No.1047
+	      <a class="del" href="javascript:void(0);" onclick="del(1047);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1047);return(false);" class="sod" id="sd1047">+</a>
+	      <blockquote>response:47<br>dice5d100=<font color="#ff0000">85 31 90 17 37 (260)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1048" value="delete" id="delcheck1048">19/04/19(Fri) 22:47:44 No.1048
+	      <a class="del" href="javascript:void(0);" onclick="del(1048);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1048);return(false);" class="sod" id="sd1048">+</a>
+	      <blockquote>response:48<br>dice5d100=<font color="#ff0000">37 73 71 83 42 (306)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1049" value="delete" id="delcheck1049">19/04/19(Fri) 22:48:43 No.1049
+	      <a class="del" href="javascript:void(0);" onclick="del(1049);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1049);return(false);" class="sod" id="sd1049">+</a>
+	      <blockquote>response:49<br>dice5d100=<font color="#ff0000">39 92 54 20 6 (211)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <table border="0">
+        <tbody><tr><td class="rts">…</td><td class="rtd">
+	      <input type="checkbox" name="1050" value="delete" id="delcheck1050">19/04/19(Fri) 22:49:42 No.1050
+	      <a class="del" href="javascript:void(0);" onclick="del(1050);return(false);">del</a>
+	      <a href="javascript:void(0);" onclick="sd(1050);return(false);" class="sod" id="sd1050">+</a>
+	      <blockquote>response:50<br>dice5d100=<font color="#ff0000">25 74 18 39 96 (252)</font></blockquote></td></tr>
+        </tbody>
+      </table>
+
+      <div style="clear:left"></div>
+    </div>
+
+  </body>
+</html>
+

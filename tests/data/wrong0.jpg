@@ -1,0 +1,35 @@
+const trm = require('./test-runner-module.js');
+const test_runner_test = require('./test-runner-test.js');
+const test_string_to_u8 = require('./test-string-to-u8.js');
+const test_jpeg_operations = require('./test-jpeg-operations.js');
+const test_md5 = require('./test-md5.js');
+
+const IncludeTestRunnerTest = false;
+
+function run_all() {
+
+    if (IncludeTestRunnerTest)
+	var test_runner_test_result = new trm.TestRunner().setup(test_runner_test).run().report();
+    let test_string_to_u8_result = new trm.TestRunner().setup(test_string_to_u8).run().report();
+    let test_jpeg_operations_result = new trm.TestRunner().setup(test_jpeg_operations).run().report();
+    let test_md5_result = new trm.TestRunner().setup(test_md5).run().report();
+
+    let all_report_html = "";
+    if (IncludeTestRunnerTest)
+	all_report_html += test_runner_test_result.report_html();
+    all_report_html += test_jpeg_operations_result.report_html();
+    all_report_html += test_string_to_u8_result.report_html();
+    all_report_html += test_md5_result.report_html();
+    return all_report_html;
+}
+
+exports.run_all = run_all;
+
+console.log(`argv: ${process.argv}`);
+console.log(`argv1: ${process.argv[1]}`);
+
+console.log(`filename: ${__filename}`);
+
+
+if (!trm.test_file_is_required(__filename))
+    run_all();

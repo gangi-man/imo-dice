@@ -1,0 +1,15 @@
+{
+   "name": "imo-dice-tests",
+   "devDependencies": {
+      "electron": "^1.6.1"
+   },
+   "version": "1.0.0",
+   "main": "run-all-tests-electron.js",
+   "author": "",
+   "license": "ISC",
+   "description": "",
+   "scripts": {
+      "test.bat": "..\\node_modules\\.bin\\electron .",
+      "test.sh": "../node_modules/.bin/electron ."
+   }
+}
