@@ -7,7 +7,8 @@
     "pretest.bat": ".\\build.bat",
     "test.bat": ".\\node_modules\\.bin\\electron .",
     "prepackage.bat": ".\\build.bat",
-    "package.bat": ".\\node_modules\\.bin\\electron-packager --overwrite --icon=imo-dice.ico . imo-dice && xcopy /i /y /e samples imo-dice-win32-x64\\SAMPLES"
+    "package.bat": ".\\node_modules\\.bin\\electron-packager --overwrite --icon=imo-dice.ico . imo-dice && xcopy /i /y /e samples imo-dice-win32-x64\\SAMPLES",
+    "package-darwin.bat": ".\\node_modules\\.bin\\electron-packager --overwrite --platform=darwin . imo-dice"
   },
   "author": "gangi-man",
   "license": "ISC",
