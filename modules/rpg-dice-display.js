@@ -69,7 +69,6 @@ function rpg_dice_display() {
 
 
     function has_displayed(element) {
-	parent.ELEM = element;
 	let elements = element.getElementsByClassName('imodice_show');
 	return (elements.length > 0);
     }
@@ -77,7 +76,6 @@ function rpg_dice_display() {
     function append_display(element, dice) {
 	let applied = m_rule.apply(dice);
 	let disp = applied.map( a => a.disp + a.delimiter).join("");
-	parent.APP = applied;
 	let div = document.createElement('div');
 	div.className = "imodice_show";
 	div.innerHTML = `<font color='${TextColor}' size='-1'>${disp}</font>`;

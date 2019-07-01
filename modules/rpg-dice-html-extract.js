@@ -17,33 +17,85 @@ function rpg_dice_html_extract() {
 	eyes: array of each dice value.
 	sum: sum of eyes
       }
-     */
+    */
 
-    function extract() {
-	function get_next_block_quote(elem){
-	    while(elem){
-		if (elem.tagName == 'BLOCKQUOTE')
-		    return elem
-		elem = elem.nextElementSibling
-	    }
-	    return null;
+    function is_akahuku() {
+	let metas = document.getElementsByTagName('meta');
+	if (!metas)
+	    return false;
+	
+	for (let i=0; i<metas.length; i++) {
+	    if (metas[i].getAttribute("name")=="generator" && metas[i].getAttribute("content")=="akahukuplus")
+		return true;
 	}
 
-	let result = [];
-	let input_arr = document.getElementsByTagName('input');
-	for(let i=0; i<input_arr.length; i++){
-	    let id_match = /delcheck(\d+)/.exec(input_arr[i].getAttribute('id'))
-	    if (!id_match)
+	return false;
+    }
+
+    function extract_akahuku() {
+	function rewriteDice(text) {
+	    let orgText = text;
+	    let lines = text.split(/<\s*br\s*>/i);
+
+	    for (let i=0; i<lines.length; i++) {
+		if (lines[i].match(/dice\d+d\d+=/) && lines[i].match(/<\s*span\s+class\s*=\s*"mark"\s*>/)) {
+		    lines[i] = lines[i].replace(/<\s*\/span\s*>/, "</font>");
+		    lines[i] = lines[i].replace(/<\s*span[^>]*>/, "<font color=\"#ff0000\">");
+		}
+	    }
+
+	    return lines.join("<br>");
+	}
+	
+	let results = [];
+	let comments = document.getElementsByClassName("comment");
+	if (!comments)
+	    return null;
+	
+	for (let i=0; i<comments.length; i++) {
+	    if (comments[i].tagName != "DIV")
 		continue;
 
-	    let bloq = get_next_block_quote(input_arr[i]);
-	    if (bloq)
-		result.push( { element : bloq,
-			       dice : _get_dice(bloq)
-			     });
+	    comments[i].innerHTML = rewriteDice(comments[i].innerHTML);
+
+	    results.push(
+		{
+		    element : comments[i],
+		    dice : _get_dice(comments[i])
+		}
+	    );
+	}
+
+	return results;
+    }
+
+    function extract_2chan() {
+	let result = [];
+
+	let threads = document.getElementsByClassName('thre');
+	for (let i=0; i<threads.length; i++) {
+	    let bloq_list = threads[i].getElementsByTagName('BLOCKQUOTE');
+
+	    if (bloq_list)
+		for (let i=0; i<bloq_list.length; i++) {
+		    result.push(
+			{
+			    element : bloq_list[i],
+			    dice : _get_dice(bloq_list[i])
+			}
+		    );
+		}
 	}
 
 	return result;
+    }
+
+    function extract() {
+	if (is_akahuku()) {
+	    return extract_akahuku();
+	} else {
+	    return extract_2chan();
+	}
     }
 
     function _get_dice(blocq_element) {
@@ -101,33 +153,84 @@ function rpg_dice_html_extract() {
 	};
     }
 
-    function extract_image_proc(strict_mode) {
-	let alist = document.getElementsByTagName('a');
+    function extract_image_proc_akahuku() {
+	let articles = document.getElementsByTagName('ARTICLE');
+	for (let i=0; i<articles.length; i++) {
+	    let anchors = articles[i].getElementsByTagName('A');
+	    if (!anchors)
+		continue;
+	    
+	    for (let j=0; j<anchors.length; j++) {
+		let images = anchors[j].getElementsByTagName('IMG');
+		if (!images || images.length <= 0)
+		    continue;
 
-	for(let i=0; i<alist.length; i++) {
-	    let a_element = alist[i];
-	    let found = null;
+		let url = anchors[j].href;
+		if (!url)
+		    continue;
 
-	    if (!a_element.innerHTML.match(/\d+\.jpe?g/i))
+		if (url.match(/^data:/i))
+		    continue;
+
+		return _get_image_binary_promise(url);
+	    }
+	}
+    }
+
+    // Extract the first anchor element which has one or more image tags and its link match \d+.jpg
+    //  and the tag is included by <div class="thre" ...>
+    function extract_image_proc_2chan(strict_mode) {
+	function get_image_url(div) {
+	    let alist = div.getElementsByTagName('a');
+	    for (let i=0; i<alist.length; i++) {
+		let a_element = alist[i];
+
+		if (strict_mode && !a_element.href.match(/\d+\.jpe?g/i))
+		    continue;
+		
+		let images = a_element.getElementsByTagName('img');
+		if (images.length)
+		    return a_element.href;
+	    }
+
+	    return null;
+	}
+
+	let threads = document.getElementsByClassName("thre");
+	for (let i=0; i<threads.length; i++) {
+	    let t = threads[i];
+	    if (t.tagName != "DIV")
 		continue;
 
-	    if (strict_mode && !a_element.href.match(/^https?:\/\/[^.]+\.2chan.net\//i))
+	    let url = get_image_url(t);
+	    if (url === null)
 		continue;
 
-	    return _get_image_binary_promise(a_element.href);
+	    if ( strict_mode && !url.match(/^https?:\/\/[^.]+\.2chan.net\//i))
+		continue;
+
+	    return _get_image_binary_promise(url);
 	}
 
 	return null;
     }
 
     function extract_image() {
-	let result = extract_image_proc(true);
-	if (result !== null)
-	    return result;
+	let result = null;
+	
+	if (is_akahuku()) {
+	    result = extract_image_proc_akahuku();
+	    if (result !== null)
+		return result;
+	} else {
+	    result = extract_image_proc_2chan(true);
+	    if (result !== null)
+		return result;
 
-	result = extract_image_proc(false);
-	if (result !== null)
-	    return result;
+	    result = extract_image_proc_2chan(false);
+	    if (result !== null)
+		return result;
+	}
 
 	throw( new Error("no_image_in_html_error") );
     }
