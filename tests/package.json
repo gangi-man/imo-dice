@@ -1,7 +1,7 @@
 {
    "name": "imo-dice-tests",
    "devDependencies": {
-      "electron": "^1.6.1"
+      "electron": "^11.5.0"
    },
    "version": "1.0.0",
    "main": "run-all-tests-electron.js",
